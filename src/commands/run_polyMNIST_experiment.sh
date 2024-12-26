@@ -3,7 +3,7 @@
 OUTPUTDIR="../outputs"
 EXPERIMENT="PolyMNIST_1"
 # DATADIR="../data"
-DATADIR="../../../../../Data/Dataset"
+DATADIR="../../../../Data/Dataset/PolyMNIST"
 EPOCHS=250
 SEED=2
 SHARED_LAT_DIM=32
