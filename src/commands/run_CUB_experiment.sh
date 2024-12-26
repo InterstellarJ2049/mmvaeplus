@@ -3,7 +3,7 @@
 OUTPUTDIR="../outputs"
 EXPERIMENT="CUB_Image_Captions_1"
 # DATADIR="../data"
-DATADIR="../../../Data/Dataset"
+DATADIR="../../../../Data/Dataset"
 EPOCHS=50
 SEED=2
 SHARED_LAT_DIM=48
