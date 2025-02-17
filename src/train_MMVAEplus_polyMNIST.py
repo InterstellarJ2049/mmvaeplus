@@ -1,5 +1,7 @@
 # Train MMVAEplus model PolyMNIST dataset
 import os
+os.environ["CUBLAS_WORKSPACE_CONFIG"] = ":4096:8"  # Set before importing torch
+
 import argparse
 import sys
 import json
@@ -124,6 +126,12 @@ train_dataset, test_dataset = model.getDataSets(args.batch_size, device=device)
 # Load validation and test indices
 
 kwargs = {'num_workers': 2, 'pin_memory': True} if device == 'cuda' else {}
+g = torch.Generator()
+g.manual_seed(0)
+kwargs['generator'] = g
+torch.backends.cudnn.benchmark = False
+torch.use_deterministic_algorithms(True)
+
 train_loader = torch.utils.data.DataLoader(train_dataset, batch_size=args.batch_size, shuffle=True, **kwargs)
 test_loader = torch.utils.data.DataLoader(test_dataset, batch_size=args.batch_size, shuffle=True, **kwargs)
 
