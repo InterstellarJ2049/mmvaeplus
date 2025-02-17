@@ -79,7 +79,7 @@ if not args.experiment:
     args.experiment = model.modelName
 
 # Set up run path
-runId = str(args.latent_dim_w) + '_' + str(args.latent_dim_z) + '_' + str(args.beta) + '_' + str(args.seed)
+runId = 'Original_2.17-1_' + str(args.obj) + '_' + str(args.latent_dim_w) + '_' + str(args.latent_dim_z) + '_b' + str(args.beta) + '_S' + str(args.seed) + '_PolyMNIST'
 experiment_dir = Path(os.path.join(args.outputdir, args.experiment, "checkpoints"))
 experiment_dir.mkdir(parents=True, exist_ok=True)
 runPath = os.path.join(str(experiment_dir), runId)
@@ -561,7 +561,7 @@ if __name__ == '__main__':
     with Timer('MMVAEplus') as t:
         for epoch in range(1, args.epochs + 1):
             train(epoch) # Train the model
-            if epoch % 25 == 0:
+            if epoch % 5 == 0:
                 # Generate samples
                 gen_samples = model.generate_unconditional(N=100, coherence_calculation=False, fid_calculation=False)
                 for j in range(NUM_VAES):

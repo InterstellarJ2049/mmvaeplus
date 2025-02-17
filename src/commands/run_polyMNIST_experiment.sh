@@ -1,7 +1,7 @@
 #!/bin/bash
 
 OUTPUTDIR="../outputs"
-EXPERIMENT="PolyMNIST_1"
+EXPERIMENT="PolyMNIST_Feb_1"
 # DATADIR="../data"
 DATADIR="../../../../Data/Dataset/PolyMNIST/data_ICLR_2"
 EPOCHS=250
