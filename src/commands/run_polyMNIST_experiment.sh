@@ -5,7 +5,7 @@ EXPERIMENT="PolyMNIST_Feb_1"
 # DATADIR="../data"
 DATADIR="../../../../Data/Dataset/PolyMNIST/data_ICLR_2"
 EPOCHS=250
-SEED=3
+SEED=2
 SHARED_LAT_DIM=32
 MS_LAT_DIM=32
 
