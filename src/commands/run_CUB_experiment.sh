@@ -8,9 +8,9 @@ SEED=2  # new_release: 2
 SHARED_LAT_DIM=48  # new_release: 48
 MS_LAT_DIM=16  # new_release: 16
 
-OBJ="elbo"  # elbo, dreg, vcca, new_release: "dreg"
+OBJ="dreg"  # elbo, dreg, vcca, new_release: "dreg"
 BATCH=32  # new_release: 32
-K=1  # new_release: 10
+K=10  # new_release: 10
 beta=1.0  # new_release: 1.0
 
 gpuid=3
