@@ -13,7 +13,7 @@ BATCH=32  # new_release: 32
 K=10  # new_release: 10
 beta=1.0  # new_release: 1.0
 
-gpuid=3
+gpuid=2
 
 # new_release: obj="dreg", K=10, batch-size=32, beta=1.0, priorposterior="Normal"
 # Train MMVAEplus
